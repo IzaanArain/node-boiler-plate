@@ -131,7 +131,7 @@ app.get("/about_us*", (req, res, next) => {
         paragraph: abc[0]?.aboutUs,
     });
 });
-cronJob()
+// cronJob()
 const PORT = process.env.PORT || 3002;
 server.listen(PORT, (req, res) => {
     console.log(`Server running on ${PORT}`);

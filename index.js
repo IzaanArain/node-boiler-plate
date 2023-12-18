@@ -50,6 +50,7 @@ var io = require('socket.io')(server, {
 
 io.on('connection', socket => {
     console.log("socket connection " + socket.id);
+
     socket.on('get_messages', function (object) {
         var user_room = "user_" + object.sender_id;
         socket.join(user_room);
@@ -63,6 +64,7 @@ io.on('connection', socket => {
             }
         });
     });
+    
     // SEND MESSAGE EMIT
     socket.on('send_message', function (object) {
         var sender_room = "user_" + object.sender_id;
@@ -77,6 +79,7 @@ io.on('connection', socket => {
             }
         });
     });
+
 });
 const contentSeeder = [
     {

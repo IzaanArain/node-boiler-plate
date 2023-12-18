@@ -14,7 +14,7 @@ const get_messages = async (object, callback) => {
     } catch (error) {
         callback(error)
     }
-}
+}         
 
 const send_message = async (object, callback) => {
     try {
